@@ -2,6 +2,7 @@
  * Created by user on 2016/10/18.
  */
 var menu_list={
+
     busi_sys_menu:[
         {
             name:"营运",
@@ -23,13 +24,13 @@ var menu_list={
                         {
                             name:"经营总况",
                             index:"tri-0",
-                            links:"../mainPage.html",
+                            links:"../views/test.html",
                             target:"#page-frame"
                         },
                         {
                             name:"业绩指标",
                             index:"tri-1",
-                            links:"../pages/service/business_index.html",
+                            links:"../views/test.html",
                             target:"#page-frame"
                         },
                         {

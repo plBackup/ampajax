@@ -50,7 +50,13 @@ ddajaxtabs.loadpage=function(page_request, pageurl, tabinstance){
 	var divId=tabinstance.contentdivid
 	document.getElementById(divId).innerHTML=ddajaxtabssettings.loadstatustext //Display "fetching page message"
 	if (page_request.readyState == 4 && (page_request.status==200 || window.location.href.indexOf("http")==-1)){
-		document.getElementById(divId).innerHTML=page_request.responseText
+		//这里改动，如果innerHTML不触发$document.ready
+		//document.getElementById(divId).innerHTML=page_request.responseText
+		if(typeof jQuery!=="undefined"){
+			jQuery("#"+divId).html(page_request.responseText);
+		}else {
+			document.getElementById(divId).html = page_request.responseText;
+		}
 		ddajaxtabs.ajaxpageloadaction(pageurl, tabinstance)
 	}
 }
