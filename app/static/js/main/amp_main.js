@@ -303,7 +303,8 @@ var amp_main=(function($,menu,am){
     };
 
     amp_main.subNav_init=function(){
-        $(".head-main-menu").on("click touchend","a",function(e){
+        //这里放到amp_main.init 处理 ，因为加载延时的关系
+       /* $(".head-main-menu").on("click touchend","a",function(e){
             //e.preventDefault();
             $this=$(this);
             if(!$this.parent("li").hasClass("active")){
@@ -311,11 +312,15 @@ var amp_main=(function($,menu,am){
                 $this.parent("li").addClass("active");
                 var id=$this.attr("id");
                 var href=$(this).attr("href");
+                //tab show;
+                console.log("tab show----------------");
+                console.log($this);
+                $this.tab("show");
                 re_locate(id,href);
             }else{
                 return;
             }
-        });
+        });*/
 
       $(".header-nav-sub").on("click","a.header-subnav-item",function(e){
               e.preventDefault();
