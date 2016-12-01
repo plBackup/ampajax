@@ -36,20 +36,18 @@
     <script src="../static/js/main/amp_main.js"></script>
 
     <script>
-     /*   function _callback(){
-            var pages=new ddajaxtabs("page-main", "pageContainer");
-            //pages.setpersist(true);
+        function _callback(){
+            var pages=new ddajaxtabs("pageheader", "pageContainer");
+            pages.setpersist(true);
             pages.setselectedClassTarget("link"); //"link" or "linkparent"
             pages.init();
-
-        }*/
-
+        }
         $(window).load(function() {
             amp_main.placeholder_init();
         });
 
         $(document).ready(function(){
-            amp_main.init("busi_sys_menu");
+            amp_main.init("busi_sys_menu",_callback);
         });
 
     </script>
@@ -68,7 +66,7 @@
 <div id="preloader">
     <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
 </div>
-<main class="page page-main ys-amp animated" id="page-main" role="main" ng-app="amp" ng-controller="MainController">
+<main class="page page-main ys-amp animated" id="page-main" role="main" >
       <!--ng-class="{'view-back': state.back, 'view-to-home': state.toHome, 'view-exit': state.exit, 'fadeOutLeft': state.exit, 'view-enter': state.enter, 'view-loading': state.loading}"-->
 
     <div class="leftpanel">
@@ -103,14 +101,13 @@
 
         </div><!-- headerbar -->
 
-        <div class="pageheader clearfix">
+        <div class="pageheader clearfix" id="pageheader">
             <!-- Tab panes-->
         </div>
     </div>
 
     <div class="mainpanel" id="pageContainer">
       <!-- <ui-view name="content"></ui-view>-->
-
     </div><!-- mainpanel -->
 
     <!-- rightpanel -->

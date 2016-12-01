@@ -34,6 +34,7 @@ var amp_main=(function($,menu,am){
                        '<li>',
                        '<a ui-sref="'+main_nav_links,
                        '" href="'+main_nav_links,
+                       '" rel="'+e.target,
                         '" class="ys-menu-link"',
                        ' id="'+main_index+'"',
                        ' data-show-header="'+boolean_show_header+'"',
@@ -51,7 +52,7 @@ var amp_main=(function($,menu,am){
                             var sub_id=i;
                             var sub_li=[
                                 '<li>',
-                                    '<a href="'+ e.links+'" target="'+ e.target+'" data-show-header="'+e.show_page_header+'" data-relocate="'+ e.re_locate+'" id="sub-'+ main_id+'-'+sub_id+'">'+ e.name+'</a>',
+                                    '<a rel="'+e.target+'" href="'+ e.links+'" target="'+ e.target+'" data-show-header="'+e.show_page_header+'" data-relocate="'+ e.re_locate+'" id="sub-'+ main_id+'-'+sub_id+'">'+ e.name+'</a>',
                                 '</li>'
                             ].join("");
                             sub_ul.push(sub_li);
@@ -60,7 +61,7 @@ var amp_main=(function($,menu,am){
 
                     var li_item=[
                         '<li class="nav-parent">',
-                        '<a href="#header-tabs-'+i+'" class="ys-menu-link" id="'+main_index+'">',
+                        '<a rel="'+e.target+'" href="#header-tabs-'+i+'" class="ys-menu-link" id="'+main_index+'">',
                          '<em class="ys-icon-spirit '+icon+'"></em>',
                          '<span>'+main_nav_name+'</span>',
                         '</a>',
@@ -100,7 +101,7 @@ var amp_main=(function($,menu,am){
                ];*/
                 var li_item=[
                     '<li role="presentation" id="nav-tabs-item-'+main_index+'-'+sub_index+'">',
-                    '<a href="#pane-sub-'+main_index+'-'+sub_index+'" role="tab" data-toggle="tab" data-href="'+ e.links+'" data-relocate="'+ e.re_locate+'" id="nav-'+main_index+'-'+sub_index+'">'+ e.name+'</a>',
+                    '<a rel="'+e.target+'" href="#pane-sub-'+main_index+'-'+sub_index+'" role="tab" data-toggle="tab" data-href="'+ e.links+'" data-relocate="'+ e.re_locate+'" id="nav-'+main_index+'-'+sub_index+'">'+ e.name+'</a>',
                     '</li>',
                 ];
                 sub_li.push(li_item.join(""));
@@ -476,7 +477,7 @@ var amp_main=(function($,menu,am){
         });
 
         if(typeof callback!=="undefined" && typeof callback=="function"){
-            callback();
+           callback();
         }
 
         var is_pc=_isPC();
