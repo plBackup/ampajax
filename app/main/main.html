@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="" lang="zh-cn"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--
+    <meta name="viewport" content="width=1680, initial-scale=1, maximum-scale=1, user-scalable=no">-->
+    <meta name="viewport" content="width=1680">
+    <title>悦商AMP</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- 导入CSS -->
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+    <!-- 导入CSS -->
+
+    <link href="../static/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/dist/css/swiper.min.css" rel="stylesheet">
+    <link href="../static/dist/css/animate.css" rel="stylesheet">
+    <!-- 自有CSS -->
+    <link href="../static/css/common/common.css" rel="stylesheet">
+    <link href="../static/css/main/amp_main.css" rel="stylesheet">
+
+
+    <script src="../static/dist/js/jquery-1.11.3.min.js"></script>
+    <script src="../static/dist/js/bootstrap.min.js"></script>
+    <script src="../static/dist/js/ajaxtabs.js"></script>
+    <script src="../static/dist/js/swiper.jquery.js"></script>
+    <script src="../static/dist/js/iscroll.js"></script>
+    <script src="../static/dist/js/jquery.pin.js"></script>
+
+    <script src="../static/js/main/menu_list.js"></script>
+    <script src="../static/js/main/amp_main.js"></script>
+
+    <script>
+     /*   function _callback(){
+            var pages=new ddajaxtabs("page-main", "pageContainer");
+            //pages.setpersist(true);
+            pages.setselectedClassTarget("link"); //"link" or "linkparent"
+            pages.init();
+
+        }*/
+
+        $(window).load(function() {
+            amp_main.placeholder_init();
+        });
+
+        $(document).ready(function(){
+            amp_main.init("busi_sys_menu");
+        });
+
+    </script>
+
+    <style>
+
+    </style>
+</head>
+<body class="">
+
+<!--[if lt IE 9]>
+<p class="updateBrowser">您的浏览器太旧了，请更新最新浏览器，以获得最佳效果.</p>
+<![endif]-->
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status"><i class="fa fa-spinner fa-spin"></i></div>
+</div>
+<main class="page page-main ys-amp animated" id="page-main" role="main" ng-app="amp" ng-controller="MainController">
+      <!--ng-class="{'view-back': state.back, 'view-to-home': state.toHome, 'view-exit': state.exit, 'fadeOutLeft': state.exit, 'view-enter': state.enter, 'view-loading': state.loading}"-->
+
+    <div class="leftpanel">
+        <div class="logopanel">
+            <!--<h1>悦商<span>AMP</span>系统</h1>-->
+            <a href="main.html" target="_self"><em class="ys-icon ys-icon-amp-s"></em></a>
+        </div><!-- logopanel -->
+        <div class="leftpanelinner">
+            <div>
+                <h5 class="sidebartitle">
+                    <a href="javascript:void(0)" class="menutoggle"><em class="ys-icon-spirit ys-icon-togglebar"></em></a>
+                </h5>
+                <ul class="nav nav-pills nav-stacked nav-bracket">
+
+                </ul>
+
+            </div>
+         <!--   <div class="system-toggle">
+                <span id="beta">AMP PAAS Beta1.0 2016</span>
+            </div>-->
+        </div><!-- leftpanelinner -->
+    </div><!-- leftpanel -->
+    <div class="headerpanel">
+        <div class="headerbar">
+            <div class="head-main-menu">
+                <!-- Nav tabs -->
+            </div>
+            <div class="header-right" id="countdown-wrapper">
+                <a class="ys-user" id="ys-user">用户名</a>
+                <a class="ys-logout" id="ys-logout">退出</a>
+            </div>
+
+        </div><!-- headerbar -->
+
+        <div class="pageheader clearfix">
+            <!-- Tab panes-->
+        </div>
+    </div>
+
+    <div class="mainpanel" id="pageContainer">
+      <!-- <ui-view name="content"></ui-view>-->
+
+    </div><!-- mainpanel -->
+
+    <!-- rightpanel -->
+    <div class="rightpanel">
+
+    </div>
+    <!--modal parts-->
+
+    <!--end modal parts-->
+    <!--backdrop loading-->
+    <div class="backdrop"></div>
+    <!--end backdrop loading-->
+    <div class="amp-loading">
+        <div class="loading-wrapper">
+            <div class="loading-ani">
+                <img src="../static/images/main/loading.gif">
+            </div>
+            <span>处理中...</span>
+        </div>
+    </div>
+</main>
+</body>
+</html>
